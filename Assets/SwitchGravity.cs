@@ -18,22 +18,26 @@ public class SwitchGravity : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && canToggleGravity)
         {
             rb.gravityScale *= -1;  // Flip gravity scale
-            Rotation();  // Flip the player's sprite based on gravity
+            Rotation();  // Flip the player sprite and rotate it upside down
         }
     }
 
     void Rotation()
     {
-        // If gravity is flipped, change the player's scale on the X axis to -1 (flip horizontally)
+        // Flip the gravity by modifying the X axis scale and rotating the player
         if (!top)
         {
-            // Flip the player's sprite horizontally (by inverting the x-axis scale)
-            transform.localScale = new Vector3(-1f, 1f, 1f); // Flip player to face the opposite direction
+            // Flip the player upside down (rotate 180 degrees on the Z-axis)
+            transform.eulerAngles = new Vector3(0, 0, 180f);  // Rotate player 180 degrees around the Z-axis
+
+            // Flip the player horizontally by changing the X scale to -1
+            transform.localScale = new Vector3(-1f, 1f, 1f);  // Flip player sprite horizontally
         }
         else
         {
-            // Reset the player's scale to its original state (normal facing right)
-            transform.localScale = new Vector3(1f, 1f, 1f); // Ensure player faces right again
+            // Reset the rotation and scale back to default when gravity is flipped back
+            transform.eulerAngles = Vector3.zero;  // Reset rotation back to normal (Z = 0)
+            transform.localScale = new Vector3(1f, 1f, 1f);  // Reset scale to normal (X = 1)
         }
 
         top = !top;  // Toggle the gravity flip state for next time
