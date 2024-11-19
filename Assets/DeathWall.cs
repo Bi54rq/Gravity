@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEditor;  // For SceneAsset reference in the Inspector
+using UnityEditor;  
 using UnityEngine.SceneManagement;
 
 public class DeathWall : MonoBehaviour

@@ -3,8 +3,8 @@ using UnityEngine;
 public class AutoMove : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float moveSpeed = 5f;  // Speed at which the player moves
-    public bool moveRight = true; // Direction the player will move (true = right, false = left)
+    public float moveSpeed = 5f;  // Speed 
+    public bool moveRight = true; // Direction (true = right, false = left)
 
     private Rigidbody2D rb;
     private bool isFacingRight;
@@ -23,11 +23,11 @@ public class AutoMove : MonoBehaviour
         // Apply automatic movement based on the direction
         if (moveRight)
         {
-            rb.linearVelocity = new Vector2(moveSpeed, rb.linearVelocity.y); // Moving right
+            rb.linearVelocity = new Vector2(moveSpeed, rb.linearVelocity.y); // right
         }
         else
         {
-            rb.linearVelocity = new Vector2(-moveSpeed, rb.linearVelocity.y); // Moving left
+            rb.linearVelocity = new Vector2(-moveSpeed, rb.linearVelocity.y); // left
         }
 
         // Flip the sprite based on movement direction
