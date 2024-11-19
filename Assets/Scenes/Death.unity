@@ -366,10 +366,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
+    m_FontSize: 14
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -377,7 +377,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "You Died! \n:("
+  m_Text: "You Died! \n:( \nTry dodging the \nred blocks"
 --- !u!222 &470881134
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -927,8 +927,8 @@ GameObject:
   - component: {fileID: 2085959806}
   - component: {fileID: 2085959805}
   - component: {fileID: 2085959804}
-  - component: {fileID: 2085959808}
   - component: {fileID: 2085959809}
+  - component: {fileID: 2085959808}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1033,8 +1033,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd901011fea69474a830d3c96ca89419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadSceneButton: {fileID: 482226651}
-  sceneName: Level
+  loadSceneButton: {fileID: 330503549}
+  sceneName: MainMenu
 --- !u!114 &2085959809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1047,8 +1047,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd901011fea69474a830d3c96ca89419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadSceneButton: {fileID: 330503549}
-  sceneName: MainMenu
+  loadSceneButton: {fileID: 482226651}
+  sceneName: Level
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
