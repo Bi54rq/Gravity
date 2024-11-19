@@ -1,18 +1,15 @@
 using UnityEngine;
-using UnityEditor;  
+using UnityEditor;  // Only for the editor
 using UnityEngine.SceneManagement;
 
 public class DeathWall : MonoBehaviour
 {
-    public SceneAsset scene;
+    // Use a string to store the scene name
+    public string sceneName;
 
-
-    
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        string sceneName = scene.name;
+        // Load the scene using the scene name string
         SceneManager.LoadScene(sceneName);
-
     }
-
 }
